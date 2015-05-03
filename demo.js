@@ -4,10 +4,13 @@ $(window).ready(function() {
   var customData = {
     isEnabled: true
   };
-  var myMenu = new wcMenu('.wcMenuContainer', '.container', {data: customData});
+
+  var myMenu = new wcMenu('.wcMenuContainer', '.container', {
+    data: customData,
+    version: 'v1.0.0'
+  });
 
   if (myMenu) {
-    myMenu.version('v1.0.0');
 
     // A simple menu option.
     myMenu.addOption('File', 'Option', {

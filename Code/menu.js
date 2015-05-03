@@ -22,7 +22,8 @@ function wcMenu(container, outerContainer, options) {
   // Setup our options.
   this._options = {
     data: false,
-    manualUpdate: false
+    manualUpdate: false,
+    version: ''
   };
   for (var prop in options) {
     this._options[prop] = options[prop];
@@ -30,7 +31,7 @@ function wcMenu(container, outerContainer, options) {
 
   this.$fileMenu = $('<ul class="wcMenu wcMenuNoHighlights"></ul>');
   this.$toolbar = $('<div class="wcMenuToolbar wcMenuNoHighlights"></div>');
-  this.$version = $('<div class="wcMenuVersionTag"></div>');
+  this.$version = $('<div class="wcMenuVersionTag">' + this._options.version + '</div>');
 
   this.$container.append(this.$fileMenu);
   this.$container.append(this.$toolbar);
@@ -91,7 +92,7 @@ wcMenu.prototype = {
   },
 
   /**
-   * Gets, or Sets the version tag (text that appears in the right-most margin of the menu bar).
+   * Gets, or Sets the version tag to display in the right margin of the menu bar.
    * @function wcMenu#version
    * @param {String} [tag] - The version tag.
    * @returns {String}

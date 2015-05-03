@@ -3,6 +3,7 @@
  * @typedef {Object} wcMenu~Options
  * @property {Object} [data] - A custom data object that will be passed to all event handlers.
  * @property {Boolean} [manualUpdate] - Set true if you want to handle the menu update yourself.
+ * @property {String} [version] - A version tag to display in the right margin of the menu bar.
  */
 
 /**
