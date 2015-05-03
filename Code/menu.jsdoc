@@ -1,0 +1,48 @@
+/**
+ * Menu options.
+ * @typedef {Object} wcMenu~Options
+ * @property {Object} [data] - A custom data object that will be passed to all event handlers.
+ * @property {Boolean} [manualUpdate] - Set true if you want to handle the menu update yourself.
+ */
+
+/**
+ * On click handler for menu and toolbar options.
+ * @callback wcMenu~OnActivation
+ * @param {Object} data - The custom data object from {@link wcMenu~Options}.
+ */
+
+/**
+ * A callback that retrieves the display text for the menu option.
+ * @callback wcMenu~MenuDisplayFunc
+ * @param {Object} data - The custom data object from {@link wcMenu~Options}.
+ * @returns {String}
+ */
+
+/**
+ * A callback that retrieves the icon class for a menu option.
+ * @callback wcMenu~MenuIconFunc
+ * @param {Object} data - The custom data object from {@link wcMenu~Options}.
+ * @returns {String}
+ */
+
+/**
+ * A callback that retrieves the description string for a menu option.
+ * @callback wcMenu~MenuDescriptionFunc
+ * @param {Object} data - The custom data object from {@link wcMenu~Options}.
+ * @returns {String}
+ */
+
+/**
+ * Custom options for a menu option.
+ * @typedef {Object} wcMenu~MenuOptions
+ * @property {wcMenu~MenuDisplayFunc} [display] - A function that returns the display text that should be shown on the menu option item. If not supplied, the default menu name will be applied.
+ * @property {String|wcMenu~MenuIconFunc} [icon] - A classname to apply as an icon for the option.  If this is a function, it will be called during the update call and should return the icon class.
+ * @property {String} [description|wcMenu~MenuDescriptionFunc] - The description to show as a tooltip for this option.
+ * @property {Number} [itemIndex] - An insertion index to insert the item within the menu category, default is to append to the end.
+ * @property {Number} [categoryIndex] - If this creates a new category, it will be inserted at this index in the top level menu.
+ * @property {Boolean} [toolbarIndex] - If supplied, creates a toolbar button for this option and inserts it in the tab bar at the specified index. -1 will append it to the end.
+ * @property {String} [hotkeys] - A string that describes hotkeys for your control, the format is 'Ctrl+Z' or 'Alt+Shift+L,Shift+L' for multiple.
+ * @property {Function} [condition] - A function to call during the update to determine if the menu option should be enabled or disabled. Return false to disable the option.
+ * @param {wcMenu~OnActivation} onActivated - A handler to call when the option is activated.
+ */
+
