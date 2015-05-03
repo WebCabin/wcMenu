@@ -7,6 +7,8 @@ $(window).ready(function() {
   var myMenu = new wcMenu('.wcMenuContainer', '.container', {data: customData});
 
   if (myMenu) {
+    myMenu.version('v1.0.0');
+
     // A simple menu option.
     myMenu.addOption('File', 'Option', {
       hotkeys: 'Alt+O,Shift+O',

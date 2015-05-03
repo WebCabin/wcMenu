@@ -83,7 +83,7 @@ function wcMenu(container, outerContainer, options) {
 
   this.$fileMenu = $('&lt;ul class="wcMenu wcMenuNoHighlights">&lt;/ul>');
   this.$toolbar = $('&lt;div class="wcMenuToolbar wcMenuNoHighlights">&lt;/div>');
-  this.$version = $('&lt;div class="wcMenuVersionTag">Sample&lt;/div>');
+  this.$version = $('&lt;div class="wcMenuVersionTag">&lt;/div>');
 
   this.$container.append(this.$fileMenu);
   this.$container.append(this.$toolbar);
@@ -141,6 +141,20 @@ wcMenu.prototype = {
         }
       }
     }
+  },
+
+  /**
+   * Gets, or Sets the version tag (text that appears in the right-most margin of the menu bar).
+   * @function wcMenu#version
+   * @param {String} [tag] - The version tag.
+   * @returns {String}
+   */
+  version: function(tag) {
+    if (tag !== undefined) {
+      this.$version.text(tag);
+    }
+
+    return this.$version.text();
   },
 
   /**
