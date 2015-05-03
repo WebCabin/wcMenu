@@ -67,7 +67,7 @@ ul.wcMenu span {
 
 /* Menu separator */
 .wcMenuSeparator {
-  width: 286px;
+  width: 100%;
   height: 0px;
   margin: 0px;
 }

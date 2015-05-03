@@ -50,6 +50,8 @@ $(window).ready(function() {
       }
     });
 
+    myMenu.addSpacer('Toggle', -1);
+
     myMenu.addOption('Toggle', 'Button', {
       // hotkeys: 'B',
       icon: "fa fa-crosshairs fa-lg",
