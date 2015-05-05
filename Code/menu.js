@@ -158,7 +158,7 @@ wcMenu.prototype = {
 
     // Category doesn't exist, make it.
     if (!category) {
-      $category = $('<li class="wcMenuCategory"><span>' + categoryName + '</span><ul></ul></li>');
+      $category = $('<li class="wcMenuCategory"><span>' + categoryName + '</span><ul class="wcMenuCategoryDropdown"></ul></li>');
       category = {
         name: categoryName,
         $category: $category,
