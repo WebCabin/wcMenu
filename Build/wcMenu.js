@@ -457,6 +457,9 @@ wcMenu.prototype = {
                 hotkey.altKey == event.altKey &&
                 hotkey.keyCode == event.keyCode) {
               item.$itemSpan.click();
+              event.stopPropagation();
+              event.preventDefault();
+              return false;
             }
           }
         }

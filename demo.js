@@ -53,7 +53,7 @@ $(window).ready(function() {
     myMenu.addSpacer('Toggle', -1);
 
     myMenu.addOption('Toggle', 'Button', {
-      // hotkeys: 'B',
+      hotkeys: 'B',
       icon: "fa fa-crosshairs fa-lg",
       toolbarIndex: -1,
       description: function(data) {
@@ -69,6 +69,12 @@ $(window).ready(function() {
       onActivated: function(data) {
         alert("Toggle -> Button activated!");
       }
-    })
+    });
+
+    // for (var i = 0; i < 100; ++i) {
+    //   myMenu.addOption('Toggle' + i, 'Test' + i, {
+    //     toolbarIndex: -1
+    //   });
+    // }
   }
 });
