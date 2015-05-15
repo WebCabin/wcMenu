@@ -10,8 +10,8 @@
     "templates": {
         "cleverLinks": false,
         "monospaceLinks": false,
-        "systemTitle": "wcPlay",
-        "systemName": "<div style='font-size:15px;line-height:15px;margin-top:-5px;'>Web Cabin Play<br>v1.0.0</div>",
+        "systemTitle": "wcMenu",
+        "systemName": "<div style='font-size:15px;line-height:15px;margin-top:-5px;'>Web Cabin Menu<br>v1.0.0</div>",
         "footer": "",
         "copyright": "",
         "navType": "vertical",
