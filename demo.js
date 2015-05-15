@@ -24,10 +24,10 @@ $(window).ready(function() {
     });
 
     // Put a spacer right after the last 'File' menu item button in the toolbar.
-    myMenu.addToolbarSpacer('File', -1);
+    myMenu.addToolbarSpacer('File', 'Option');
 
     // A more dynamic set of menu options.
-    myMenu.addOption('Toggle', 'Option On', {
+    myMenu.addOption('Toggle', 'Option Enabled', {
       hotkeys: 'E',
       description: 'Toggle enabled status of the next option.',
       toolbarIndex: -1,
@@ -50,7 +50,7 @@ $(window).ready(function() {
       }
     });
 
-    myMenu.addSpacer('Toggle', -1);
+    myMenu.addSpacer('Toggle', 'Option Enabled');
 
     myMenu.addOption('Toggle', 'Button', {
       hotkeys: 'B',
@@ -70,6 +70,9 @@ $(window).ready(function() {
         alert("Toggle -> Button activated!");
       }
     });
+
+
+    // myMenu.removeOption('Toggle', 'Option Enabled');
 
     // for (var i = 0; i < 100; ++i) {
     //   myMenu.addOption('Toggle' + i, 'Test' + i, {
