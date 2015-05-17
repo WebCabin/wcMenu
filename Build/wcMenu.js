@@ -391,7 +391,7 @@ wcMenu.prototype = {
       return false;
     }
 
-    optionData.$spacer = $('<li><hr class="wcMenuSeparator"></li>');
+    optionData.$spacer = $('<li><div class="wcMenuSeparator"></li>');
     optionData.$spacer.insertAfter(optionData.$item);
     return true;
   },
@@ -477,7 +477,7 @@ wcMenu.prototype = {
     }
 
     if (optionData.$toolbar) {
-      optionData.$toolbarSpacer = $('<div class="ARPG_Separator"></div>');
+      optionData.$toolbarSpacer = $('<div class="wcMenuSeparator"></div>');
       optionData.$toolbarSpacer.insertAfter(optionData.$toolbar);
     }
     return true;
