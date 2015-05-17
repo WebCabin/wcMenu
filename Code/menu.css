@@ -40,7 +40,7 @@ ul.wcMenu {
   font-size: 13px;
   float: left;
   cursor: pointer;
-  background-color: white;
+  /*background-color: white;*/
 }
 
 /* Menu category drop down */
