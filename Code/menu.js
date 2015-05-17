@@ -6,21 +6,16 @@
  *
  * @constructor
  * @param {external:jQuery~Object|external:jQuery~Selector|external:domNode} container - The container element.
- * @param {external:jQuery~Object|external:jQuery~Selector|external:domNode} outerContainer - The outer container element, this is your main container area for the entire window.
  * @param {wcMenu~Options} [options] - Custom options.
  */
-function wcMenu(container, outerContainer, options) {
+function wcMenu(container, options) {
   this.$container = $(container);
-  this.$outer = $(outerContainer);
-
-  if (!this.$outer.attr('tabindex')) {
-    this.$outer.attr('tabindex', '1');
-  }
 
   this._menuOptions = [];
 
   // Setup our options.
   this._options = {
+    outer: 'body',
     data: false,
     manualUpdate: false,
     version: ''
@@ -33,9 +28,14 @@ function wcMenu(container, outerContainer, options) {
   this.$toolbar = $('<div class="wcMenuToolbar wcMenuNoHighlights"></div>');
   this.$version = $('<div class="wcMenuVersionTag">' + this._options.version + '</div>');
 
+  this.$outer = $(this._options.outer);
   this.$container.append(this.$fileMenu);
   this.$container.append(this.$toolbar);
   this.$fileMenu.append(this.$version);
+
+  if (!this.$outer.attr('tabindex')) {
+    this.$outer.attr('tabindex', '1');
+  }
 
   // Setup events.
   var self = this;

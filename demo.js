@@ -5,7 +5,8 @@ $(window).ready(function() {
     isEnabled: true
   };
 
-  var myMenu = new wcMenu('.wcMenuContainer', '.container', {
+  var myMenu = new wcMenu('.wcMenuContainer', {
+    outer: '.container',
     data: customData,
     version: 'v1.0.0'
   });

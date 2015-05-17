@@ -1,6 +1,7 @@
 /**
  * Menu options.
  * @typedef {Object} wcMenu~Options
+ * @property {external:jQuery~Object|external:jQuery~Selector|external:domNode} [outer='body'] - The outer container element, this is your main container area for the entire window.
  * @property {Object} [data] - A custom data object that will be passed to all event handlers.
  * @property {Boolean} [manualUpdate] - Set true if you want to handle the menu update yourself.
  * @property {String} [version] - A version tag to display in the right margin of the menu bar.
