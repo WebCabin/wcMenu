@@ -223,3 +223,6 @@ ul.wcMenu span {
   user-select: none;
 }
 
+.wcButtonActive, .wcButton:active, button:active {
+  border: 1px inset #666;
+}
