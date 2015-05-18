@@ -37,6 +37,9 @@ $(window).ready(function() {
         return "Option Off";
       }
     },
+    toggle: function(data) {
+      return data.isEnabled;
+    },
     icon: function(data) {
       if (data.isEnabled) {
         return "fa fa-toggle-on fa-lg";

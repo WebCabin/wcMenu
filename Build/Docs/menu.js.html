@@ -130,6 +130,17 @@ wcMenu.prototype = {
           }
         }
 
+        if (item.toggle) {
+          var toggle = item.toggle(this._options.data);
+          if (toggle !== item.lastToggle) {
+            item.$icon.toggleClass('wcButtonActive', toggle);
+            if (item.$toolbarIcon) {
+              item.$toolbarIcon.parent().toggleClass('wcButtonActive', toggle);
+            }
+            item.lastToggle = toggle;
+          }
+        }
+
         if (item.icon) {
           var icon = item.icon(this._options.data);
           if (icon !== item.lastIcon) {
@@ -203,6 +214,10 @@ wcMenu.prototype = {
 
     if (options &amp;&amp; typeof options.display === 'function') {
       optionData.display = options.display;
+    }
+
+    if (options &amp;&amp; typeof options.toggle === 'function') {
+      optionData.toggle = options.toggle;
     }
 
     // Find the category if it exists.
@@ -696,6 +711,58 @@ wcMenu.prototype = {
       delete optionData.display;
     } else {
       optionData.display = display;
+    }
+    return true;
+  },
+
+  /**
+   * Replaces the toggle function for an existing option.
+   * @function wcMenu#optionToggle
+   * @param {String} categoryName - The top level category of the option.
+   * @param {String} name - The name of the option.
+   * @param {wcMenu~MenuToggleFunc} [toggle] - A function that returns the toggle state of the menu option item. If not supplied, option will no longer toggle.
+   * @returns {Boolean} - Success or failure.
+   */
+  optionToggle: function(categoryName, name, toggle) {
+    if (!name || !categoryName) {
+      return false;
+    }
+
+    // Find the category if it exists.
+    var category = null;
+    for (var i = 0; i &lt; this._menuOptions.length; ++i) {
+      if (this._menuOptions[i].name === categoryName) {
+        category = this._menuOptions[i];
+        break;
+      }
+    }
+
+    if (!category) {
+      return false;
+    }
+
+    var optionData = null;
+    for (var i = 0; i &lt; category.items.length; ++i) {
+      if (category.items[i].name === name) {
+        optionData = category.items[i];
+        break;
+      }
+    }
+
+    if (!optionData) {
+      return false;
+    }
+
+    if (typeof toggle !== 'function') {
+      optionData.toggle = undefined;
+      delete optionData.toggle;
+
+      optionData.$icon.removeClass('wcButtonActive');
+      if (item.$toolbarIcon) {
+        optionData.$toolbarIcon.parent().removeClass('wcButtonActive');
+      }
+    } else {
+      optionData.toggle = toggle;
     }
     return true;
   },

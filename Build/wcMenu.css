@@ -220,7 +220,7 @@ ul.wcMenu span {
 }
 
 .wcButtonActive, .wcButton:active, button:active {
-  border-width: 1px;
+  border-width: 2px;
   border-style: inset !important;
   border-color: #666;
 }

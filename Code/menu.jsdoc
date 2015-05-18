@@ -21,6 +21,13 @@
  */
 
 /**
+ * A callback that retrieves the current toggle state of the menu option.
+ * @callback wcMenu~MenuToggleFunc
+ * @param {Object} data - The custom data object from {@link wcMenu~Options}.
+ * @returns {String}
+ */
+
+/**
  * A callback that retrieves the icon class for a menu option.
  * @callback wcMenu~MenuIconFunc
  * @param {Object} data - The custom data object from {@link wcMenu~Options}.
@@ -37,6 +44,7 @@
 /**
  * Custom options for a menu option.
  * @typedef {Object} wcMenu~MenuOptions
+ * @property {wcMenu~MenuToggleFunc} [toggle] - A function that returns the current toggle state of the option.
  * @property {wcMenu~MenuDisplayFunc} [display] - A function that returns the display text that should be shown on the menu option item. If not supplied, the default menu name will be applied.
  * @property {String|wcMenu~MenuIconFunc} [icon] - A classname to apply as an icon for the option.  If this is a function, it will be called during the update call and should return the icon class.
  * @property {String|wcMenu~MenuDescriptionFunc} [description] - The description to show as a tooltip for this option.
