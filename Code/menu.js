@@ -406,7 +406,7 @@ wcMenu.prototype = {
       return false;
     }
 
-    optionData.$spacer = $('<li><div class="wcMenuSeparator"></li>');
+    optionData.$spacer = $('<li><hr class="wcMenuSeparator"></li>');
     optionData.$spacer.insertAfter(optionData.$item);
     return true;
   },
