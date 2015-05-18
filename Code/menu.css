@@ -157,7 +157,7 @@ ul.wcMenu span {
 }
 
 .wcMenuToolbar .wcButton {
-  position: absolute;
+  /*position: absolute;*/
   width: 20px;
   height: 20px;
   line-height: 20px !important;
@@ -192,19 +192,19 @@ ul.wcMenu span {
   border-left: 2px solid lightgray;
 }
 
-.wcMenuToolbar span:hover {
+.wcMenuToolbar .wcMenuIcon:hover {
   border: 2px outset #888;
   background-color: #CCC;
 }
 
 /* Disabled menu item */
-.wcMenuToolbar div.disabled span {
+.wcMenuToolbar .wcMenuIcon.disabled {
   border: 2px outset #888;
   cursor: default;
   opacity: 0.5;
 }
 
-.wcMenuToolbar div.disabled span:hover {
+.wcMenuToolbar .wcMenuIcon.disabled:hover {
   border: 2px outset #888;
   background-color: #EEE;
   opacity: 0.5;

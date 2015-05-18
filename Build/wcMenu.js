@@ -73,9 +73,9 @@ wcMenu.prototype = {
         if (item.icon) {
           var icon = item.icon(this._options.data);
           if (icon !== item.lastIcon) {
-            item.$icon.removeClass().addClass('wcMenuIcon wcButton ' + icon);
+            item.$icon.children('i').removeClass().addClass('' + icon);
             if (item.$toolbarIcon) {
-              item.$toolbarIcon.removeClass().addClass('wcMenuIcon wcButton ' + icon);
+              item.$toolbarIcon.removeClass().addClass('' + icon);
             }
             item.lastIcon = icon;
           }
@@ -156,7 +156,7 @@ wcMenu.prototype = {
     }
 
     if (options && typeof options.toolbarIndex === 'number') {
-      optionData.$toolbar = $('<div><span class="wcMenuIcon wcButton"/></div>');
+      optionData.$toolbar = $('<div class="wcMenuIcon wcButton"><span></span></div>');
       optionData.$toolbarSpan = optionData.$toolbar.children('span');
 
       var $tools = this.$toolbar.children();
@@ -205,7 +205,7 @@ wcMenu.prototype = {
     optionData.$item = $('<li><span class="wcMenuItem">&nbsp;&nbsp;&nbsp;&nbsp;' + name + '</span></li>');
     optionData.$itemSpan = optionData.$item.children('span');
 
-    var $icon = $('<i class="wcMenuIcon wcButton"/>');
+    var $icon = $('<div class="wcMenuIcon wcButton"><i></i></div>');
     if (options && options.icon) {
       if (typeof options.icon === 'string') {
         $icon.addClass(options.icon);
@@ -683,9 +683,9 @@ wcMenu.prototype = {
       delete optionData.icon;
 
       if (typeof icon === 'string') {
-        optionData.$icon.removeClass().addClass('wcMenuIcon wcButton ' + icon);
+        optionData.$icon.children('i').removeClass().addClass('' + icon);
         if (optionData.$toolbar) {
-          optionData.$toolbarIcon.removeClass().addClass('wcMenuIcon wcButton ' + icon);
+          optionData.$toolbarIcon.removeClass().addClass('' + icon);
         }
       }
     } else {
