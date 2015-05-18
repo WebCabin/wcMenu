@@ -123,7 +123,7 @@ ul.wcMenu span {
 }
 
 .wcMenu .disabled {
-  color: gray !important;
+  color: gray;
 }
 
 .wcMenu .wcMenuItemHover,
@@ -153,7 +153,7 @@ ul.wcMenu span {
   padding: 0px;
   border: 0px;
   cursor: pointer;
-  color: #444;
+  /*color: #444;*/
 }
 
 .wcMenuToolbar .wcButton {
