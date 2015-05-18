@@ -94,7 +94,7 @@ wcMenu.prototype = {
 
         if (item.condition) {
           var disabled = !item.condition(this._options.data);
-          if (item.lastDisabled) {
+          if (disabled !== item.lastDisabled) {
             item.$itemSpan.toggleClass('disabled', disabled);
             if (item.$toolbar) {
               item.$toolbar.toggleClass('disabled', disabled);
