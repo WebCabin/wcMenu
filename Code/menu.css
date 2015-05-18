@@ -227,6 +227,6 @@ ul.wcMenu span {
 }
 
 .wcButtonActive.wcButtonHover, .wcButton:hover.wcButtonActive, .wcButton:active.wcButtonHover, .wcButton:active:hover, button:active:hover {
-  border: 2px outset #888 !important;
+  border: 2px inset #888 !important;
   background-color: #CCC;
 }
