@@ -224,5 +224,7 @@ ul.wcMenu span {
 }
 
 .wcButtonActive, .wcButton:active, button:active {
-  border: 1px inset #666;
+  border-width: 1px;
+  border-style: inset !important;
+  border-color: #666;
 }
