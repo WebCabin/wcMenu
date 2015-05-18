@@ -230,6 +230,12 @@ wcMenu.prototype = {
       }
     } else if (options && typeof options.description === 'function') {
       optionData.description = options.description;
+    } else {
+      optionData.$itemSpan.attr('title', '');
+
+      if (optionData.$toolbar) {
+        optionData.$toolbarSpan.attr('title', '');
+      }
     }
 
     var $hotkey = $('<span class="wcMenuHotkey">');
