@@ -223,7 +223,7 @@ wcMenu.prototype = {
     var $icon = $('<div class="wcMenuIcon wcButton"><i></i></div>');
     if (options && options.icon) {
       if (typeof options.icon === 'string') {
-        $icon.addClass(options.icon);
+        $icon.children('i').addClass(options.icon);
 
         if (optionData.$toolbar) {
           optionData.$toolbarSpan.addClass(options.icon);
