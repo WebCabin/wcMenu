@@ -378,6 +378,12 @@ wcMenu.prototype = {
       return false;
     }
 
+    // Remove a category when no items exist.
+    if (category.items.length === 0) {
+      category.$category.remove();
+      this._menuOptions.splice(this._menuOptions.indexOf(category), 1);
+    }
+
     optionData.$item.remove();
     optionData.$toolbar.remove();
 
