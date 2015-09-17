@@ -285,6 +285,14 @@ wcMenu.prototype = {
           hotkeyData.keyCode = 13;
         } else if (hotkey.indexOf('space') > -1 || hotkey.indexOf('spc') > -1) {
           hotkeyData.keyCode = 32;
+        } else if (hotkey.indexOf('left') > -1) {
+          hotkeyData.keyCode = 37;
+        } else if (hotkey.indexOf('up') > -1) {
+          hotkeyData.keyCode = 38;
+        } else if (hotkey.indexOf('right') > -1) {
+          hotkeyData.keyCode = 39;
+        } else if (hotkey.indexOf('down') > -1) {
+          hotkeyData.keyCode = 40;
         } else {
           // Ascii character code.
           hotkeyData.keyCode = hotkey.toUpperCase().charCodeAt(hotkey.length-1);

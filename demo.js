@@ -27,7 +27,7 @@ $(window).ready(function() {
 
   // A more dynamic set of menu options.
   myMenu.addOption('Toggle', 'Option Enabled', {
-    hotkeys: 'E',
+    hotkeys: 'Left',
     description: 'Toggle enabled status of the next option.',
     toolbarIndex: -1,
     display: function(data) {
