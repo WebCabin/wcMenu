@@ -1,0 +1,14 @@
+{
+  "name": "webcabin-menu",
+  "author": {
+  	"name": "WebCabin",
+  	"url": "http://menu.webcabin.org"
+  }
+  "version": "0.0.0",
+  "description": "A simple file menu and toolbar system.",
+  "main": "Build/wcMenu.min.js",
+  "dependencies": {
+    "font-awesome": "4.6.3",
+    "jquery": "3.1.0"
+  }
+}

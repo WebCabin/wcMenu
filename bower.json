@@ -1,7 +1,7 @@
 {
   "name": "wcMenu",
-  "description": "wcMenu (Web Cabin Menu) is a simple file and toolbar menu system.",
-  "version": "1.0.0",
+  "description": "A simple file menu and toolbar system.",
+  "version": "0.0.0",
   "keywords": [
     "tool",
     "interface",
@@ -14,12 +14,14 @@
   "ignore": [
     "/.*",
     "favicon.ico",
-    "index.html",
-    "indexDev.html",
+    "index_bower.html",
+    "indexDev_bower.html",
+    "index_node.html",
+    "indexDev_node.html",
     "demo.js",
     "Code",
     "Compiler",
-    "bower_components"
+    "package.json"
   ],
   "dependencies": {
     "jquery": "1.11.1"

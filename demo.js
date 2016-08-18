@@ -73,6 +73,18 @@ $(window).ready(function() {
     }
   });
 
+  myMenu.addToolbarSpacer('Toggle', 'Button');
+
+  myMenu.addOption('Code', 'Github', {
+    hotkeys: 'C',
+    icon: "fa fa-github fa-lg",
+    toolbarIndex: -1,
+    description: "View the source on Github!",
+    onActivated: function(data) {
+      window.open('https://github.com/WebCabin/wcMenu', '_blank');
+    }
+  })
+
   // myMenu.removeOption('Toggle', 'Option Enabled');
 
   // for (var i = 0; i < 100; ++i) {
